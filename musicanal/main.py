@@ -1,11 +1,13 @@
 import bpmdetect
 import os
 from pydub import AudioSegment
+import datetime
 
 
 
 if __name__ == '__main__':
     dir = 'd:/pymus'
+    print(datetime.datetime.now())
     namelist = os.listdir(dir)
 
     namelist = filter(lambda x: x.endswith('.mp3'), namelist)
@@ -21,3 +23,4 @@ if __name__ == '__main__':
 
     for name in namelist:
         bmpanaliz = bpmdetect.bpmdetect(dir+'/'+str(name))
+        print(datetime.datetime.now())
