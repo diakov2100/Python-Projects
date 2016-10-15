@@ -20,7 +20,7 @@ def search():
     result = sp.search(search_str, 5, 0, 'playlist')
     for playlist in result['playlists']['items']:
         print(playlist['name'])
-        results = sp.user_playlist(playlist['owner']['id'], playlist['id'], fields="tracks,next"),# '94a636ebaa3f46d1af9c8dcf66858daf', '8b057cb6a70641969d3a5b706dc501d9')
+        results = sp.user_playlist(playlist['owner']['id'], playlist['id'], fields="tracks,next")# '94a636ebaa3f46d1af9c8dcf66858daf', '8b057cb6a70641969d3a5b706dc501d9')
         tracks = results['tracks']
         show_tracks(tracks)
         while tracks['next']:
