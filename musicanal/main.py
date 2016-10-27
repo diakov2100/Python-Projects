@@ -5,11 +5,12 @@ import datetime
 import spotipy.util as util
 import SPsearchplaylist
 import spotipy
+import auth
 
 
 
 if __name__ == '__main__':
-
+    auth
 
     print(datetime.datetime.now())
    # dir = 'd:/pymus'
