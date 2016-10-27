@@ -14,7 +14,8 @@ if __name__ == '__main__':
 
     print(datetime.datetime.now())
    # dir = 'd:/pymus'
-    # для работы следующего метода нужна авторизация
+
+    #dfs для работы следующего метода нужна авторизация
     SPsearchplaylist.search()
 
 
