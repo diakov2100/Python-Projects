@@ -2,7 +2,6 @@ import pprint
 
 import spotipy
 import sys
-import spotipy.util as util
 
 def show_tracks(tracks):
     for i, item in enumerate(tracks['items']):

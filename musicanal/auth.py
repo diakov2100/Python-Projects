@@ -19,7 +19,7 @@ USERNAME = 'mrgoldlion'
 
 SPOTIPY_CLIENT_ID = '2677052c01ac46f69ae9fa2dd8a5ffc2'
 SPOTIPY_CLIENT_SECRET = '9e0665f38b944d008d94eb97bcf2f28a'
-SPOTIPY_REDIRECT_URI = 'http://7282cd50.ngrok.io/auth/'
+SPOTIPY_REDIRECT_URI =  'http://ec095cfe.ngrok.io/auth'
 
 
 def hello(request):
@@ -52,4 +52,4 @@ def handle_auth():
     return "Success"
 
 app.run(port=8071, debug=True)
-app.config['SERVER_NAME'] = "http://7282cd50.ngrok.io"
+app.config['SERVER_NAME'] = ' http://ec095cfe.ngrok.io'
