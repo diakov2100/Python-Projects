@@ -5,18 +5,22 @@ import datetime
 import spotipy.util as util
 import SPsearchplaylist
 import spotipy
-import auth
+import musicdownloader
+#import auth
 
 
 
 if __name__ == '__main__':
-    auth
+    #auth
 
     print(datetime.datetime.now())
    # dir = 'd:/pymus'
+    musicdownloader.GMauth()
+    musicdownloader.getmuisc('asd')
 
     #dfs для работы следующего метода нужна авторизация
-    SPsearchplaylist.search()
+    #SPsearchplaylist.search()
+    
 
 
     '''

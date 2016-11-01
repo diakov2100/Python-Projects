@@ -24,6 +24,9 @@
     <Compile Include="auth.py" />
     <Compile Include="bpmdetect.py" />
     <Compile Include="main.py" />
+    <Compile Include="musicdownloader.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SPsearchplaylist.py" />
   </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
