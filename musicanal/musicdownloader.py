@@ -2,7 +2,6 @@ from __future__ import print_function, division, absolute_import, unicode_litera
 from builtins import *  # noqa
 
 from gmusicapi import Mobileclient
-import gmusicapi
 import urllib.request
 
 
@@ -11,10 +10,7 @@ password="TblZmusicbot123"
 
 
 def ask_for_credentials():
-    # We're not going to upload anything, so the Mobileclient is what we want.
     api = Mobileclient()
-
-
     logged_in = False
     attempts = 0
 
@@ -32,18 +28,15 @@ def GMauth():
         return
 
     print('Successfully logged in.')
-    print()
+    return api
 
+def getsong(api, song_name):
 
-def getsong(song_name):
     song= api.search(song_name, 1)['song_hits'][0]['track']
     url = api.get_stream_url(song['storeId'], device_id=None, quality=u'hi')
-    urllib.request.urlretrieve(url, song['title']+'.mp3')
+    urllib.request.urlretrieve(url, song_name+'.mp3')
 
-def logout():
+def logout(api):
     api.logout()
+    print('Successfully logged out.')
 
-if __name__ == '__main__':
-    api = ask_for_credentials()
-    getsong('Love Keyshia Cole')
-    logout()
