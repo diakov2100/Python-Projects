@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3d74ab74-5057-4a15-a71e-54b7011de6b0}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>auth.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
