@@ -140,6 +140,7 @@ def bpmdetect(filename):
 
     bpm = numpy.average(bpms)
     print('Completed.  Estimated Beats Per Minute:', bpm, numpy.min(bpms),numpy.max(bpms))
+    return bpms
 
     #n = range(0, len(correl))
     #plt.plot(n, abs(correl))
