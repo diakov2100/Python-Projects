@@ -28,10 +28,12 @@
     <Compile Include="musicdownloader.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SPsearchplaylist.py" />
     <Compile Include="start_flask.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data.json" />
   </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />

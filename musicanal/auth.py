@@ -46,7 +46,7 @@ def SPsearch():
         search_str = 'sport'
 
         sp = spotipy.Spotify(auth=token)
-        result = sp.search(search_str, 2, 0, 'playlist')
+        result = sp.search(search_str, 1, 0, 'playlist')
 
         for playlist in result['playlists']['items']:
           print(playlist['name'].encode("utf-8"))
