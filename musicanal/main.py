@@ -3,7 +3,6 @@ import os
 from pydub import AudioSegment
 import datetime
 import spotipy.util as util
-import SPsearchplaylist
 import spotipy
 import musicdownloader
 import gmusicapi
@@ -11,29 +10,36 @@ import auth
 import json
 import string
 import codecs
+from pyechonest import util
+from pyechonest import song
 
 if __name__ == '__main__':
 
     auth
-    testedtraks=dict()
-    with open('data.json') as data_file:    
-        testedtraks = json.load(data_file)
+    testedtraks = dict()
+    #with open('data.json') as data_file:    
+    #    testedtraks = json.load(data_file)
     print(datetime.datetime.now())
     dir = 'D:/lib/'
-    errornames=[]
-    data=auth.SPsearch()
+    errornames = []
+    data = auth.SPsearch()
 
 
-    api = musicdownloader.GMauth();
+    api = musicdownloader.GMauth()
     for namelist in data:
         for track in namelist:
-            name=track['track']['name']
+            name = track['track']['name']
+            artist=track['track']['artists'][0]['name']
+
             if track['track']['id'] not in testedtraks:
                 try:
+                    results = song.search(artist=artist, title=name, results=1, buckets=['audio_summary'])
+                    if len(results) > 0:
+                        results[0].audio_summary['tempo']
                     musicdownloader.getsong(api, name, dir)
-                    sound = AudioSegment.from_mp3(dir  + name + '.mp3')
+                    sound = AudioSegment.from_mp3(dir + name + '.mp3')
                     sound.export(dir + name + '.wav', format="wav")
-                    testedtraks[track['track']['id']]=bpmdetect.bpmdetect(dir + str(name+'.wav')).tolist()
+                    testedtraks[track['track']['id']] = bpmdetect.bpmdetect(dir + str(name + '.wav')).tolist()
                     os.remove(dir + name + '.wav')
                 except:
                     print('not found')
