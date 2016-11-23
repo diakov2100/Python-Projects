@@ -11,13 +11,13 @@ import sys
 import spotipy.util as util
 import os
 
-os.environ['SPOTIPY_CLIENT_ID'] = "2677052c01ac46f69ae9fa2dd8a5ffc2"
-os.environ['SPOTIPY_CLIENT_SECRET'] = "9e0665f38b944d008d94eb97bcf2f28a"
-os.environ['SPOTIPY_REDIRECT_URI'] = "https://d387d1c8.ngrok.io/auth/"
+os.environ['SPOTIPY_CLIENT_ID'] = "94a636ebaa3f46d1af9c8dcf66858daf"
+os.environ['SPOTIPY_CLIENT_SECRET'] = "8b057cb6a70641969d3a5b706dc501d9"
+os.environ['SPOTIPY_REDIRECT_URI'] = "https://c5346607.ngrok.io/auth/"
 
 
 #if len(sys.argv) > 1:
-username = 'mrgoldlion'
+username = 'diakov111'
 #else:
  #   print("Whoops, need your username!")
   #  print("usage: python featured_playlists.py [username]")
@@ -46,7 +46,7 @@ def SPsearch():
         search_str = 'sport'
 
         sp = spotipy.Spotify(auth=token)
-        result = sp.search(search_str, 10, 0, 'playlist')
+        result = sp.search(search_str, 12, 0, 'playlist')
 
         for playlist in result['playlists']['items']:
           print(playlist['name'].encode("utf-8"))
