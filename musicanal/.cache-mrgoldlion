@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"access_token": "BQCfPr0pci8Bg98smf4Ml1HeI0Dh80jRU9KIR-nhBTvCrPEzK0w_8O_FkcqudVkE4o2btsUqyyVlu5mzdf97D8Fkrip683GY8sI_7SlBivC2kXRgW-f95efFSwZ00t3v2uCJi5tomEa8z8c0rE3e2yQ", "scope": null, "refresh_token": "AQCo99gDeo3WmKaIKxkFzQzHunF0Mq2CdQv4x62B5ZeNuqbS9ccmy1Fx8A2y16wOknhvxDbQTpyIJSBWad9hG9YIBX-HTbPgb2w9OWas1wBJjoYvcpXw1Cid2S_7ns7Akx4", "expires_in": 3600, "token_type": "Bearer", "expires_at": 1479921674}
+=======
+{"expires_in": 3600, "scope": null, "refresh_token": "AQBNnYntSdaBKg5a62OqieBpRqITjTnya3K2ZL2KGyl-CqTRR5kZN8metW3ptl7mXNPEtNM1SSZdJolrXHqbqlP3bK5Jm5rtIY8WNGgCgQJIDP267kFg18Zkbm0UoqOKaSc", "token_type": "Bearer", "expires_at": 1479908737, "access_token": "BQB43ndPY4qd7puLC6LVz_LzFGays5JdYsw6E-X2XrfPotU46U00HS0fsY0y6ZnxymOG0kJj2Y0Pa4J129XxovOdDUqAnc9MMQTyDPk2vIkd19LYrv7P8mRwBme9-CNBYj2pjEfhksBPFiXyre5dK4_04e0nMg"}
+>>>>>>> origin/master
