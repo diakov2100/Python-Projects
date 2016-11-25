@@ -4,8 +4,8 @@ from pydub import AudioSegment
 import datetime
 import spotipy.util as util
 import spotipy
-import musicdownloader
-import gmusicapi
+#import musicdownloader
+#import gmusicapi
 import auth
 import json
 import string
@@ -14,17 +14,17 @@ import Database
 
 
 if __name__ == '__main__':
-
     auth
     testedtraks = dict()
+    #Database.DeleteDB()
     #with open('data.json') as data_file:    
     #    testedtraks = json.load(data_file)
-    print(datetime.datetime.now())
-    dir = 'D:/lib/'
-    errornames=[]
+    #print(datetime.datetime.now())
+    #dir = 'D:/lib/'
+    #errornames=[]
     data=auth.SPsearch()
     fulldata= auth.SPgetinfo(data)
-    Database.fillDB(fulldata)
+    Database.fillDB(fulldata[2166:])
     print(datetime.datetime.now())
 
     #api = musicdownloader.GMauth();

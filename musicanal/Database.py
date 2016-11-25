@@ -7,3 +7,6 @@ def fillDB(fulldata):
     collection= db["spotify_db"]
     for track in fulldata:
         collection.insert(track)
+
+def DeleteDB():
+   client.drop_database("spotify_db")

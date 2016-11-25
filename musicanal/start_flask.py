@@ -7,4 +7,4 @@ def handle_auth():
     return "Success"
 
 app.run(port=8071, debug=True)
-app.config['SERVER_NAME'] = 'https://c5346607.ngrok.io'
+app.config['SERVER_NAME'] = 'https://3c835075.ngrok.io'

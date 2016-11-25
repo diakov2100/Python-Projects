@@ -13,7 +13,7 @@ import os
 
 os.environ['SPOTIPY_CLIENT_ID'] = "94a636ebaa3f46d1af9c8dcf66858daf"
 os.environ['SPOTIPY_CLIENT_SECRET'] = "8b057cb6a70641969d3a5b706dc501d9"
-os.environ['SPOTIPY_REDIRECT_URI'] = "https://c5346607.ngrok.io/auth/"
+os.environ['SPOTIPY_REDIRECT_URI'] = "https://3c835075.ngrok.io/auth/"
 
 
 #if len(sys.argv) > 1:
@@ -46,7 +46,7 @@ def SPsearch():
         search_str = 'sport'
 
         sp = spotipy.Spotify(auth=token)
-        result = sp.search(search_str, 12, 0, 'playlist')
+        result = sp.search(search_str, 36, 0, 'playlist')
 
         for playlist in result['playlists']['items']:
           print(playlist['name'].encode("utf-8"))
@@ -71,5 +71,6 @@ def SPgetinfo(data):
                     trackdata['name']=track['track']['name']
                     trackdata['artists']=track['track']['artists']
                     trackdata['tempo']=sp.audio_features([track['track']['id']])[0]['tempo']
+                    trackdata['duration'] = track['track']['duration_ms']
                     fulldata.append(trackdata)
     return fulldata                   
